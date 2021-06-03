@@ -1,56 +1,50 @@
 
-## About Laravel
+## О проекте
+Этот проект - выполненное тестовое задание(текст задания приведён ниже). Использован фреймворк Laravel.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Задание 
+<h4>ТЗ тестового задания:</h4>
+<img src="https://i.ibb.co/0CF9sjx/image.png">
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p>
+    <b>Каталог-витрина</b>    
+  <ul>
+      <li><h5>1. Страница каталога товаров</h5>
+    <ul>
+      <li>Фильтры (бренд, цена, характеристики)</li>
+      <li>Сортировка (по убыв., по возр.)</li>
+        <li>Постраничная навигация</li>
+    </ul>
+  </li>
+  <li><h5>2. Карточка товара</h5>
+      <ul>
+          <li>Форма для отправки заявки на заказ (фио, контактные данные)</li>
+      <li>Фото-галерея товара</li>
+      </ul>
+      </li>
+      <li><h5>3. Страница "спасибо за заявку"</h5></li>
+      <li><h5>4. Панель управления</h5>
+      <ul>
+          <li>Авторизация по логину и паролю</li>
+      <li>Просмотр списка заявок</li>
+          <li>Добавление/удаление/редактирование товаров каталога</li>
+          <li>Загрузка фотографий товаров</li>
+      </ul>
+      </li>
+</ul>
+В качестве бэкенда использовать фреймворк <b><i>Laravel</i></b>.
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Инструкция по развертыванию
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# showcase-catalog" 
-"# showcase-catalog" 
+<ol>
+    <li>Копируем репозиторий проекта: <b>git clone https://github.com/mrSelian/showcase-catalog</b></li>
+    <li>Загружаем зависимости для проекта: <b>composer install</b></li>
+    <li>Создаём новую базу данных.</b></li>
+    <li>Копируем файл <b>.env</b> из <b>.env.example</b> и настраиваем подключение к базе данных.</li>
+    <li>Генерируем код приложения: <b>php artisan key:generate</b></li>
+    <li>Осуществялем миграцию базы и сидинг тестовых данных: <b>php artisan migrate:fresh --seed</b></li>
+    <li>Запускаем дев-сервер: <b>php artisan serve</b></li>
+    <li>Проект теперь доступен по адресу: http://127.0.0.1:8000/</li>
+    <li>Логин админ-пользователя: <b>admin1@mysite.ru</b> Пароль: <b>password</b> </li>
+    </ol>
