@@ -38,6 +38,8 @@ class DbProductRepository implements ProductRepositoryInterface
         $record->warm = $product->getQualities()['warm'];
         $record->deleted = $product->isDeleted();
         $record->save();
+
+        return $record->id;
     }
 
     public function delete(Product $product)

@@ -25,6 +25,8 @@ class OrderController extends Controller
         );
         $this->orderRepository->save($order);
 
-        return redirect()->route('catalog')->with('success', 'Спасибо за заказ! Наши менеджеры свяжутся с вами в ближайшее время.');
+        $id = $this->orderRepository->save($order);
+
+        return redirect()->route('catalog')->with('success', 'Спасибо за заказ! Наши менеджеры свяжутся с вами в ближайшее время.')->with('orderId', $id);
     }
 }

@@ -27,6 +27,8 @@ class DbOrderRepository implements OrderRepositoryInterface
         $record->phone = $order->getCustomerPhone();
         $record->product_id = $order->getProductId();
         $record->save();
+
+        return $record->id;
     }
 
     public function mapToOrder(): \Closure

@@ -52,7 +52,9 @@ class ProductController extends Controller
         );
         $this->productRepository->save($product);
 
-        return redirect()->route('admin_products')->with('success', 'Товар успешно добавлен!');
+        $id = $this->productRepository->save($product);
+
+        return redirect()->route('admin_products')->with('success', 'Товар успешно добавлен!')->with('productId', $id);;
     }
 
     protected function savePhoto($photo): ?string
